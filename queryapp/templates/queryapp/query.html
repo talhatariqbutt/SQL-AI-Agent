@@ -1,0 +1,197 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>SQL AI Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            text-align: left;
+            display: inline-block;
+            width: 60%;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        table {
+            margin: auto;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Only refresh if the browser reload button was clicked
+            if (performance.navigation.type === 1) {
+                sessionStorage.setItem("pageReloaded", "true");
+            } else {
+                sessionStorage.removeItem("pageReloaded"); // Prevent unwanted reloads
+            }
+        });
+    </script>    
+</head>
+<body>
+    <h1>SQL AI Agent</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="user_query">Enter your question...</label>
+        <input type="text" id="user_query" name="user_query" value="{{ user_query }}" required>
+        <button type="submit">Generate SQL & Execute</button>
+    </form>
+
+    {% if sql_query %}
+        <h3>Generated SQL Query:</h3>
+        <pre class="output">{{ sql_query }}</pre>
+    {% endif %}
+
+    {% if query_result and query_result|length > 0 %}
+        <h3>Query Results:</h3>
+        <table>
+            <thead>
+                <tr>
+                    {% for key in query_result.0 %}
+                        <th>{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in query_result %}
+                    <tr>
+                        {% for key, value in row.items %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif query_result is not None %}
+        <h3>No Results Found</h3>
+    {% endif %}
+
+    {% if error_message %}
+        <h3 style="color: red;">Error:</h3>
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL AI Agent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism-okaidia.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .output {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .table-responsive {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .loading {
+            display: none;
+        }
+    </style>
+</head>
+<body class="container mt-4">
+    <h1 class="text-center">SQL AI Agent</h1>
+    <form method="post" class="mb-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="user_query" class="form-label">Enter your question...</label>
+            <textarea class="form-control" id="user_query" name="user_query" rows="3" placeholder="Type your question here..." required>{{ user_query }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Generate SQL & Execute</button>
+        <div class="text-center mt-2">
+            <div class="spinner-border text-primary loading" role="status">
+                <span class="visually-hidden">Processing...</span>
+            </div>
+        </div>
+    </form>
+
+    {% if sql_query %}
+        <h3>Generated SQL Query:</h3>
+        <pre class="output language-sql"><code>{{ sql_query }}</code></pre>
+    {% endif %}
+
+    {% if query_result and query_result|length > 0 %}
+        <h3>Query Results:</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        {% for key in query_result.0 %}
+                            <th>{{ key }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in query_result %}
+                        <tr>
+                            {% for key, value in row.items %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% elif query_result is not None %}
+        <h3 class="text-warning">No Results Found</h3>
+    {% endif %}
+
+    {% if error_message %}
+        <div class="alert alert-danger mt-3" role="alert">
+            <strong>Error:</strong> {{ error_message }}
+        </div>
+    {% endif %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const loadingSpinner = document.querySelector(".loading");
+            
+            form.addEventListener("submit", function () {
+                loadingSpinner.style.display = "inline-block";
+            });
+        });
+    </script>
+</body>
+</html>

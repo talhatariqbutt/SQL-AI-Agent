@@ -1,0 +1,4042 @@
+{
+    "tables": [
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_group",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 150
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_group_permissions",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "bigint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "group_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "permission_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_permission",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 255
+                },
+                {
+                    "ColumnName": "content_type_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "codename",
+                    "DataType": "nvarchar",
+                    "MaxLength": 100
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_user",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "password",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "last_login",
+                    "DataType": "datetimeoffset",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "is_superuser",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "username",
+                    "DataType": "nvarchar",
+                    "MaxLength": 150
+                },
+                {
+                    "ColumnName": "first_name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 150
+                },
+                {
+                    "ColumnName": "last_name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 150
+                },
+                {
+                    "ColumnName": "email",
+                    "DataType": "nvarchar",
+                    "MaxLength": 254
+                },
+                {
+                    "ColumnName": "is_staff",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "is_active",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "date_joined",
+                    "DataType": "datetimeoffset",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_user_groups",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "bigint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "user_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "group_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "auth_user_user_permissions",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "bigint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "user_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "permission_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AWBuildVersion",
+            "Columns": [
+                {
+                    "ColumnName": "SystemInformationID",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Database Version",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "VersionDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "DatabaseLog",
+            "Columns": [
+                {
+                    "ColumnName": "DatabaseLogID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PostTime",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DatabaseUser",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "Event",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "Schema",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "Object",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "TSQL",
+                    "DataType": "nvarchar",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "XmlEvent",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "django_admin_log",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "action_time",
+                    "DataType": "datetimeoffset",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "object_id",
+                    "DataType": "nvarchar",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "object_repr",
+                    "DataType": "nvarchar",
+                    "MaxLength": 200
+                },
+                {
+                    "ColumnName": "action_flag",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "change_message",
+                    "DataType": "nvarchar",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "content_type_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "user_id",
+                    "DataType": "int",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "django_content_type",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "app_label",
+                    "DataType": "nvarchar",
+                    "MaxLength": 100
+                },
+                {
+                    "ColumnName": "model",
+                    "DataType": "nvarchar",
+                    "MaxLength": 100
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "django_migrations",
+            "Columns": [
+                {
+                    "ColumnName": "id",
+                    "DataType": "bigint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "app",
+                    "DataType": "nvarchar",
+                    "MaxLength": 255
+                },
+                {
+                    "ColumnName": "name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 255
+                },
+                {
+                    "ColumnName": "applied",
+                    "DataType": "datetimeoffset",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "django_session",
+            "Columns": [
+                {
+                    "ColumnName": "session_key",
+                    "DataType": "nvarchar",
+                    "MaxLength": 40
+                },
+                {
+                    "ColumnName": "session_data",
+                    "DataType": "nvarchar",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "expire_date",
+                    "DataType": "datetimeoffset",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "ErrorLog",
+            "Columns": [
+                {
+                    "ColumnName": "ErrorLogID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ErrorTime",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UserName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "ErrorNumber",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ErrorSeverity",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ErrorState",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ErrorProcedure",
+                    "DataType": "nvarchar",
+                    "MaxLength": 126
+                },
+                {
+                    "ColumnName": "ErrorLine",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ErrorMessage",
+                    "DataType": "nvarchar",
+                    "MaxLength": 4000
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "Department",
+            "Columns": [
+                {
+                    "ColumnName": "DepartmentID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "GroupName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "Employee",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "NationalIDNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "LoginID",
+                    "DataType": "nvarchar",
+                    "MaxLength": 256
+                },
+                {
+                    "ColumnName": "OrganizationNode",
+                    "DataType": "hierarchyid",
+                    "MaxLength": 892
+                },
+                {
+                    "ColumnName": "OrganizationLevel",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "JobTitle",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "BirthDate",
+                    "DataType": "date",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "MaritalStatus",
+                    "DataType": "nchar",
+                    "MaxLength": 1
+                },
+                {
+                    "ColumnName": "Gender",
+                    "DataType": "nchar",
+                    "MaxLength": 1
+                },
+                {
+                    "ColumnName": "HireDate",
+                    "DataType": "date",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalariedFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "VacationHours",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SickLeaveHours",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CurrentFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "EmployeeDepartmentHistory",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DepartmentID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShiftID",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "date",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "date",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "EmployeePayHistory",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "RateChangeDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Rate",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PayFrequency",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "JobCandidate",
+            "Columns": [
+                {
+                    "ColumnName": "JobCandidateID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Resume",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "HumanResources",
+            "TableName": "Shift",
+            "Columns": [
+                {
+                    "ColumnName": "ShiftID",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "StartTime",
+                    "DataType": "time",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndTime",
+                    "DataType": "time",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "Address",
+            "Columns": [
+                {
+                    "ColumnName": "AddressID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AddressLine1",
+                    "DataType": "nvarchar",
+                    "MaxLength": 60
+                },
+                {
+                    "ColumnName": "AddressLine2",
+                    "DataType": "nvarchar",
+                    "MaxLength": 60
+                },
+                {
+                    "ColumnName": "City",
+                    "DataType": "nvarchar",
+                    "MaxLength": 30
+                },
+                {
+                    "ColumnName": "StateProvinceID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PostalCode",
+                    "DataType": "nvarchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "SpatialLocation",
+                    "DataType": "geography",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "AddressType",
+            "Columns": [
+                {
+                    "ColumnName": "AddressTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "BusinessEntity",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "BusinessEntityAddress",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AddressID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AddressTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "BusinessEntityContact",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PersonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ContactTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "ContactType",
+            "Columns": [
+                {
+                    "ColumnName": "ContactTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "CountryRegion",
+            "Columns": [
+                {
+                    "ColumnName": "CountryRegionCode",
+                    "DataType": "nvarchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "EmailAddress",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EmailAddressID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EmailAddress",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "Password",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PasswordHash",
+                    "DataType": "varchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "PasswordSalt",
+                    "DataType": "varchar",
+                    "MaxLength": 10
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "Person",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PersonType",
+                    "DataType": "nchar",
+                    "MaxLength": 2
+                },
+                {
+                    "ColumnName": "NameStyle",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Title",
+                    "DataType": "nvarchar",
+                    "MaxLength": 8
+                },
+                {
+                    "ColumnName": "FirstName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "MiddleName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "LastName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "Suffix",
+                    "DataType": "nvarchar",
+                    "MaxLength": 10
+                },
+                {
+                    "ColumnName": "EmailPromotion",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AdditionalContactInfo",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "Demographics",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "PersonPhone",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PhoneNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "PhoneNumberTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "PhoneNumberType",
+            "Columns": [
+                {
+                    "ColumnName": "PhoneNumberTypeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Person",
+            "TableName": "StateProvince",
+            "Columns": [
+                {
+                    "ColumnName": "StateProvinceID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StateProvinceCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "CountryRegionCode",
+                    "DataType": "nvarchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "IsOnlyStateProvinceFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "BillOfMaterials",
+            "Columns": [
+                {
+                    "ColumnName": "BillOfMaterialsID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductAssemblyID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ComponentID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UnitMeasureCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "BOMLevel",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PerAssemblyQty",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "Culture",
+            "Columns": [
+                {
+                    "ColumnName": "CultureID",
+                    "DataType": "nchar",
+                    "MaxLength": 6
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "Document",
+            "Columns": [
+                {
+                    "ColumnName": "DocumentNode",
+                    "DataType": "hierarchyid",
+                    "MaxLength": 892
+                },
+                {
+                    "ColumnName": "DocumentLevel",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Title",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "Owner",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "FolderFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "FileName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 400
+                },
+                {
+                    "ColumnName": "FileExtension",
+                    "DataType": "nvarchar",
+                    "MaxLength": 8
+                },
+                {
+                    "ColumnName": "Revision",
+                    "DataType": "nchar",
+                    "MaxLength": 5
+                },
+                {
+                    "ColumnName": "ChangeNumber",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Status",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DocumentSummary",
+                    "DataType": "nvarchar",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "Document",
+                    "DataType": "varbinary",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "Illustration",
+            "Columns": [
+                {
+                    "ColumnName": "IllustrationID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Diagram",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "Location",
+            "Columns": [
+                {
+                    "ColumnName": "LocationID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "CostRate",
+                    "DataType": "smallmoney",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Availability",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "Product",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ProductNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "MakeFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "FinishedGoodsFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Color",
+                    "DataType": "nvarchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "SafetyStockLevel",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReorderPoint",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StandardCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ListPrice",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Size",
+                    "DataType": "nvarchar",
+                    "MaxLength": 5
+                },
+                {
+                    "ColumnName": "SizeUnitMeasureCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "WeightUnitMeasureCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "Weight",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DaysToManufacture",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductLine",
+                    "DataType": "nchar",
+                    "MaxLength": 2
+                },
+                {
+                    "ColumnName": "Class",
+                    "DataType": "nchar",
+                    "MaxLength": 2
+                },
+                {
+                    "ColumnName": "Style",
+                    "DataType": "nchar",
+                    "MaxLength": 2
+                },
+                {
+                    "ColumnName": "ProductSubcategoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductModelID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SellStartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SellEndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DiscontinuedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductCategory",
+            "Columns": [
+                {
+                    "ColumnName": "ProductCategoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductCostHistory",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StandardCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductDescription",
+            "Columns": [
+                {
+                    "ColumnName": "ProductDescriptionID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Description",
+                    "DataType": "nvarchar",
+                    "MaxLength": 400
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductDocument",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DocumentNode",
+                    "DataType": "hierarchyid",
+                    "MaxLength": 892
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductInventory",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LocationID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Shelf",
+                    "DataType": "nvarchar",
+                    "MaxLength": 10
+                },
+                {
+                    "ColumnName": "Bin",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Quantity",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductListPriceHistory",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ListPrice",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductModel",
+            "Columns": [
+                {
+                    "ColumnName": "ProductModelID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "CatalogDescription",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "Instructions",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductModelIllustration",
+            "Columns": [
+                {
+                    "ColumnName": "ProductModelID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "IllustrationID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductModelProductDescriptionCulture",
+            "Columns": [
+                {
+                    "ColumnName": "ProductModelID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductDescriptionID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CultureID",
+                    "DataType": "nchar",
+                    "MaxLength": 6
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductPhoto",
+            "Columns": [
+                {
+                    "ColumnName": "ProductPhotoID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ThumbNailPhoto",
+                    "DataType": "varbinary",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "ThumbnailPhotoFileName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "LargePhoto",
+                    "DataType": "varbinary",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "LargePhotoFileName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductProductPhoto",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductPhotoID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Primary",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductReview",
+            "Columns": [
+                {
+                    "ColumnName": "ProductReviewID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReviewerName",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ReviewDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EmailAddress",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "Rating",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Comments",
+                    "DataType": "nvarchar",
+                    "MaxLength": 3850
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ProductSubcategory",
+            "Columns": [
+                {
+                    "ColumnName": "ProductSubcategoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductCategoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "ScrapReason",
+            "Columns": [
+                {
+                    "ColumnName": "ScrapReasonID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "TransactionHistory",
+            "Columns": [
+                {
+                    "ColumnName": "TransactionID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReferenceOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReferenceOrderLineID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TransactionDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TransactionType",
+                    "DataType": "nchar",
+                    "MaxLength": 1
+                },
+                {
+                    "ColumnName": "Quantity",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "TransactionHistoryArchive",
+            "Columns": [
+                {
+                    "ColumnName": "TransactionID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReferenceOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReferenceOrderLineID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TransactionDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TransactionType",
+                    "DataType": "nchar",
+                    "MaxLength": 1
+                },
+                {
+                    "ColumnName": "Quantity",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "UnitMeasure",
+            "Columns": [
+                {
+                    "ColumnName": "UnitMeasureCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "WorkOrder",
+            "Columns": [
+                {
+                    "ColumnName": "WorkOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OrderQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StockedQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ScrappedQty",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DueDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ScrapReasonID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Production",
+            "TableName": "WorkOrderRouting",
+            "Columns": [
+                {
+                    "ColumnName": "WorkOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OperationSequence",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LocationID",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ScheduledStartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ScheduledEndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualStartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualEndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualResourceHrs",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PlannedCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActualCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Purchasing",
+            "TableName": "ProductVendor",
+            "Columns": [
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AverageLeadTime",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StandardPrice",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LastReceiptCost",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LastReceiptDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "MinOrderQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "MaxOrderQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OnOrderQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UnitMeasureCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Purchasing",
+            "TableName": "PurchaseOrderDetail",
+            "Columns": [
+                {
+                    "ColumnName": "PurchaseOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PurchaseOrderDetailID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DueDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OrderQty",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UnitPrice",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LineTotal",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ReceivedQty",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "RejectedQty",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StockedQty",
+                    "DataType": "decimal",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Purchasing",
+            "TableName": "PurchaseOrderHeader",
+            "Columns": [
+                {
+                    "ColumnName": "PurchaseOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "RevisionNumber",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Status",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EmployeeID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "VendorID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipMethodID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OrderDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SubTotal",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TaxAmt",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Freight",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TotalDue",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Purchasing",
+            "TableName": "ShipMethod",
+            "Columns": [
+                {
+                    "ColumnName": "ShipMethodID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ShipBase",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipRate",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Purchasing",
+            "TableName": "Vendor",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AccountNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "CreditRating",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PreferredVendorStatus",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ActiveFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PurchasingWebServiceURL",
+                    "DataType": "nvarchar",
+                    "MaxLength": 1024
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "CountryRegionCurrency",
+            "Columns": [
+                {
+                    "ColumnName": "CountryRegionCode",
+                    "DataType": "nvarchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "CurrencyCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "CreditCard",
+            "Columns": [
+                {
+                    "ColumnName": "CreditCardID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CardType",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "CardNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "ExpMonth",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ExpYear",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "Currency",
+            "Columns": [
+                {
+                    "ColumnName": "CurrencyCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "CurrencyRate",
+            "Columns": [
+                {
+                    "ColumnName": "CurrencyRateID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CurrencyRateDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "FromCurrencyCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "ToCurrencyCode",
+                    "DataType": "nchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "AverageRate",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndOfDayRate",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "Customer",
+            "Columns": [
+                {
+                    "ColumnName": "CustomerID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "PersonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StoreID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "AccountNumber",
+                    "DataType": "varchar",
+                    "MaxLength": 10
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "PersonCreditCard",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CreditCardID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesOrderDetail",
+            "Columns": [
+                {
+                    "ColumnName": "SalesOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesOrderDetailID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CarrierTrackingNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "OrderQty",
+                    "DataType": "smallint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SpecialOfferID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UnitPrice",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "UnitPriceDiscount",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "LineTotal",
+                    "DataType": "numeric",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesOrderHeader",
+            "Columns": [
+                {
+                    "ColumnName": "SalesOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "RevisionNumber",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OrderDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DueDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Status",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "OnlineOrderFlag",
+                    "DataType": "bit",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesOrderNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "PurchaseOrderNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 25
+                },
+                {
+                    "ColumnName": "AccountNumber",
+                    "DataType": "nvarchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "CustomerID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesPersonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "BillToAddressID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipToAddressID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShipMethodID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CreditCardID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CreditCardApprovalCode",
+                    "DataType": "varchar",
+                    "MaxLength": 15
+                },
+                {
+                    "ColumnName": "CurrencyRateID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SubTotal",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TaxAmt",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Freight",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TotalDue",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Comment",
+                    "DataType": "nvarchar",
+                    "MaxLength": 128
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesOrderHeaderSalesReason",
+            "Columns": [
+                {
+                    "ColumnName": "SalesOrderID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesReasonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesPerson",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesQuota",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Bonus",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CommissionPct",
+                    "DataType": "smallmoney",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesYTD",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesLastYear",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesPersonQuotaHistory",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "QuotaDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesQuota",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesReason",
+            "Columns": [
+                {
+                    "ColumnName": "SalesReasonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ReasonType",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesTaxRate",
+            "Columns": [
+                {
+                    "ColumnName": "SalesTaxRateID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StateProvinceID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TaxType",
+                    "DataType": "tinyint",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TaxRate",
+                    "DataType": "smallmoney",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesTerritory",
+            "Columns": [
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "CountryRegionCode",
+                    "DataType": "nvarchar",
+                    "MaxLength": 3
+                },
+                {
+                    "ColumnName": "Group",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "SalesYTD",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "SalesLastYear",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CostYTD",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "CostLastYear",
+                    "DataType": "money",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SalesTerritoryHistory",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "TerritoryID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "ShoppingCartItem",
+            "Columns": [
+                {
+                    "ColumnName": "ShoppingCartItemID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ShoppingCartID",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "Quantity",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "DateCreated",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SpecialOffer",
+            "Columns": [
+                {
+                    "ColumnName": "SpecialOfferID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Description",
+                    "DataType": "nvarchar",
+                    "MaxLength": 255
+                },
+                {
+                    "ColumnName": "DiscountPct",
+                    "DataType": "smallmoney",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Type",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "Category",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "StartDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "EndDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "MinQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "MaxQty",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "SpecialOfferProduct",
+            "Columns": [
+                {
+                    "ColumnName": "SpecialOfferID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ProductID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        },
+        {
+            "SchemaName": "Sales",
+            "TableName": "Store",
+            "Columns": [
+                {
+                    "ColumnName": "BusinessEntityID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Name",
+                    "DataType": "nvarchar",
+                    "MaxLength": 50
+                },
+                {
+                    "ColumnName": "SalesPersonID",
+                    "DataType": "int",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "Demographics",
+                    "DataType": "xml",
+                    "MaxLength": -1
+                },
+                {
+                    "ColumnName": "rowguid",
+                    "DataType": "uniqueidentifier",
+                    "MaxLength": null
+                },
+                {
+                    "ColumnName": "ModifiedDate",
+                    "DataType": "datetime",
+                    "MaxLength": null
+                }
+            ]
+        }
+    ],
+    "foreign_keys": [
+        {
+            "ForeignKeyName": "auth_group_permissions_group_id_b120cbf9_fk_auth_group_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_group_permissions",
+            "ParentColumn": "group_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_group",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_group_permissions_permission_id_84c5c92e_fk_auth_permission_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_group_permissions",
+            "ParentColumn": "permission_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_permission",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_permission_content_type_id_2f476e4b_fk_django_content_type_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_permission",
+            "ParentColumn": "content_type_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "django_content_type",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_user_groups_group_id_97559544_fk_auth_group_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_user_groups",
+            "ParentColumn": "group_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_group",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_user_groups_user_id_6a12ed8b_fk_auth_user_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_user_groups",
+            "ParentColumn": "user_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_user",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_user_user_permissions_permission_id_1fbb5f2c_fk_auth_permission_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_user_user_permissions",
+            "ParentColumn": "permission_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_permission",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "auth_user_user_permissions",
+            "ParentColumn": "user_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_user",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "django_admin_log_user_id_c564eba6_fk_auth_user_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "django_admin_log",
+            "ParentColumn": "user_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "auth_user",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "django_admin_log_content_type_id_c4bce8eb_fk_django_content_type_id",
+            "ParentSchema": "dbo",
+            "ParentTable": "django_admin_log",
+            "ParentColumn": "content_type_id",
+            "ReferencedSchema": "dbo",
+            "ReferencedTable": "django_content_type",
+            "ReferencedColumn": "id"
+        },
+        {
+            "ForeignKeyName": "FK_Employee_Person_BusinessEntityID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "Employee",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_EmployeeDepartmentHistory_Department_DepartmentID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "EmployeeDepartmentHistory",
+            "ParentColumn": "DepartmentID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Department",
+            "ReferencedColumn": "DepartmentID"
+        },
+        {
+            "ForeignKeyName": "FK_EmployeeDepartmentHistory_Employee_BusinessEntityID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "EmployeeDepartmentHistory",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_EmployeeDepartmentHistory_Shift_ShiftID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "EmployeeDepartmentHistory",
+            "ParentColumn": "ShiftID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Shift",
+            "ReferencedColumn": "ShiftID"
+        },
+        {
+            "ForeignKeyName": "FK_EmployeePayHistory_Employee_BusinessEntityID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "EmployeePayHistory",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_JobCandidate_Employee_BusinessEntityID",
+            "ParentSchema": "HumanResources",
+            "ParentTable": "JobCandidate",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Address_StateProvince_StateProvinceID",
+            "ParentSchema": "Person",
+            "ParentTable": "Address",
+            "ParentColumn": "StateProvinceID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "StateProvince",
+            "ReferencedColumn": "StateProvinceID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityAddress_Address_AddressID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityAddress",
+            "ParentColumn": "AddressID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Address",
+            "ReferencedColumn": "AddressID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityAddress_AddressType_AddressTypeID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityAddress",
+            "ParentColumn": "AddressTypeID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "AddressType",
+            "ReferencedColumn": "AddressTypeID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityAddress",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "BusinessEntity",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityContact_BusinessEntity_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityContact",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "BusinessEntity",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityContact_ContactType_ContactTypeID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityContact",
+            "ParentColumn": "ContactTypeID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "ContactType",
+            "ReferencedColumn": "ContactTypeID"
+        },
+        {
+            "ForeignKeyName": "FK_BusinessEntityContact_Person_PersonID",
+            "ParentSchema": "Person",
+            "ParentTable": "BusinessEntityContact",
+            "ParentColumn": "PersonID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_EmailAddress_Person_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "EmailAddress",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Password_Person_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "Password",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Person_BusinessEntity_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "Person",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "BusinessEntity",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_PersonPhone_Person_BusinessEntityID",
+            "ParentSchema": "Person",
+            "ParentTable": "PersonPhone",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID",
+            "ParentSchema": "Person",
+            "ParentTable": "PersonPhone",
+            "ParentColumn": "PhoneNumberTypeID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "PhoneNumberType",
+            "ReferencedColumn": "PhoneNumberTypeID"
+        },
+        {
+            "ForeignKeyName": "FK_StateProvince_CountryRegion_CountryRegionCode",
+            "ParentSchema": "Person",
+            "ParentTable": "StateProvince",
+            "ParentColumn": "CountryRegionCode",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "CountryRegion",
+            "ReferencedColumn": "CountryRegionCode"
+        },
+        {
+            "ForeignKeyName": "FK_StateProvince_SalesTerritory_TerritoryID",
+            "ParentSchema": "Person",
+            "ParentTable": "StateProvince",
+            "ParentColumn": "TerritoryID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesTerritory",
+            "ReferencedColumn": "TerritoryID"
+        },
+        {
+            "ForeignKeyName": "FK_BillOfMaterials_Product_ProductAssemblyID",
+            "ParentSchema": "Production",
+            "ParentTable": "BillOfMaterials",
+            "ParentColumn": "ProductAssemblyID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_BillOfMaterials_Product_ComponentID",
+            "ParentSchema": "Production",
+            "ParentTable": "BillOfMaterials",
+            "ParentColumn": "ComponentID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_BillOfMaterials_UnitMeasure_UnitMeasureCode",
+            "ParentSchema": "Production",
+            "ParentTable": "BillOfMaterials",
+            "ParentColumn": "UnitMeasureCode",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "UnitMeasure",
+            "ReferencedColumn": "UnitMeasureCode"
+        },
+        {
+            "ForeignKeyName": "FK_Document_Employee_Owner",
+            "ParentSchema": "Production",
+            "ParentTable": "Document",
+            "ParentColumn": "Owner",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Product_ProductModel_ProductModelID",
+            "ParentSchema": "Production",
+            "ParentTable": "Product",
+            "ParentColumn": "ProductModelID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductModel",
+            "ReferencedColumn": "ProductModelID"
+        },
+        {
+            "ForeignKeyName": "FK_Product_ProductSubcategory_ProductSubcategoryID",
+            "ParentSchema": "Production",
+            "ParentTable": "Product",
+            "ParentColumn": "ProductSubcategoryID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductSubcategory",
+            "ReferencedColumn": "ProductSubcategoryID"
+        },
+        {
+            "ForeignKeyName": "FK_Product_UnitMeasure_SizeUnitMeasureCode",
+            "ParentSchema": "Production",
+            "ParentTable": "Product",
+            "ParentColumn": "SizeUnitMeasureCode",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "UnitMeasure",
+            "ReferencedColumn": "UnitMeasureCode"
+        },
+        {
+            "ForeignKeyName": "FK_Product_UnitMeasure_WeightUnitMeasureCode",
+            "ParentSchema": "Production",
+            "ParentTable": "Product",
+            "ParentColumn": "WeightUnitMeasureCode",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "UnitMeasure",
+            "ReferencedColumn": "UnitMeasureCode"
+        },
+        {
+            "ForeignKeyName": "FK_ProductCostHistory_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductCostHistory",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductDocument_Document_DocumentNode",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductDocument",
+            "ParentColumn": "DocumentNode",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Document",
+            "ReferencedColumn": "DocumentNode"
+        },
+        {
+            "ForeignKeyName": "FK_ProductDocument_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductDocument",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductInventory_Location_LocationID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductInventory",
+            "ParentColumn": "LocationID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Location",
+            "ReferencedColumn": "LocationID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductInventory_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductInventory",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductListPriceHistory_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductListPriceHistory",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductModelIllustration_Illustration_IllustrationID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductModelIllustration",
+            "ParentColumn": "IllustrationID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Illustration",
+            "ReferencedColumn": "IllustrationID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductModelIllustration_ProductModel_ProductModelID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductModelIllustration",
+            "ParentColumn": "ProductModelID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductModel",
+            "ReferencedColumn": "ProductModelID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductModelProductDescriptionCulture_Culture_CultureID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductModelProductDescriptionCulture",
+            "ParentColumn": "CultureID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Culture",
+            "ReferencedColumn": "CultureID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductModelProductDescriptionCulture",
+            "ParentColumn": "ProductDescriptionID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductDescription",
+            "ReferencedColumn": "ProductDescriptionID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductModelProductDescriptionCulture",
+            "ParentColumn": "ProductModelID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductModel",
+            "ReferencedColumn": "ProductModelID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductProductPhoto_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductProductPhoto",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductProductPhoto_ProductPhoto_ProductPhotoID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductProductPhoto",
+            "ParentColumn": "ProductPhotoID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductPhoto",
+            "ReferencedColumn": "ProductPhotoID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductReview_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductReview",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductSubcategory_ProductCategory_ProductCategoryID",
+            "ParentSchema": "Production",
+            "ParentTable": "ProductSubcategory",
+            "ParentColumn": "ProductCategoryID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ProductCategory",
+            "ReferencedColumn": "ProductCategoryID"
+        },
+        {
+            "ForeignKeyName": "FK_TransactionHistory_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "TransactionHistory",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_WorkOrder_Product_ProductID",
+            "ParentSchema": "Production",
+            "ParentTable": "WorkOrder",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_WorkOrder_ScrapReason_ScrapReasonID",
+            "ParentSchema": "Production",
+            "ParentTable": "WorkOrder",
+            "ParentColumn": "ScrapReasonID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "ScrapReason",
+            "ReferencedColumn": "ScrapReasonID"
+        },
+        {
+            "ForeignKeyName": "FK_WorkOrderRouting_Location_LocationID",
+            "ParentSchema": "Production",
+            "ParentTable": "WorkOrderRouting",
+            "ParentColumn": "LocationID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Location",
+            "ReferencedColumn": "LocationID"
+        },
+        {
+            "ForeignKeyName": "FK_WorkOrderRouting_WorkOrder_WorkOrderID",
+            "ParentSchema": "Production",
+            "ParentTable": "WorkOrderRouting",
+            "ParentColumn": "WorkOrderID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "WorkOrder",
+            "ReferencedColumn": "WorkOrderID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductVendor_Product_ProductID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "ProductVendor",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_ProductVendor_UnitMeasure_UnitMeasureCode",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "ProductVendor",
+            "ParentColumn": "UnitMeasureCode",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "UnitMeasure",
+            "ReferencedColumn": "UnitMeasureCode"
+        },
+        {
+            "ForeignKeyName": "FK_ProductVendor_Vendor_BusinessEntityID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "ProductVendor",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Purchasing",
+            "ReferencedTable": "Vendor",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_PurchaseOrderDetail_Product_ProductID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "PurchaseOrderDetail",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "PurchaseOrderDetail",
+            "ParentColumn": "PurchaseOrderID",
+            "ReferencedSchema": "Purchasing",
+            "ReferencedTable": "PurchaseOrderHeader",
+            "ReferencedColumn": "PurchaseOrderID"
+        },
+        {
+            "ForeignKeyName": "FK_PurchaseOrderHeader_Employee_EmployeeID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "PurchaseOrderHeader",
+            "ParentColumn": "EmployeeID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_PurchaseOrderHeader_ShipMethod_ShipMethodID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "PurchaseOrderHeader",
+            "ParentColumn": "ShipMethodID",
+            "ReferencedSchema": "Purchasing",
+            "ReferencedTable": "ShipMethod",
+            "ReferencedColumn": "ShipMethodID"
+        },
+        {
+            "ForeignKeyName": "FK_PurchaseOrderHeader_Vendor_VendorID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "PurchaseOrderHeader",
+            "ParentColumn": "VendorID",
+            "ReferencedSchema": "Purchasing",
+            "ReferencedTable": "Vendor",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Vendor_BusinessEntity_BusinessEntityID",
+            "ParentSchema": "Purchasing",
+            "ParentTable": "Vendor",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "BusinessEntity",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_CountryRegionCurrency_CountryRegion_CountryRegionCode",
+            "ParentSchema": "Sales",
+            "ParentTable": "CountryRegionCurrency",
+            "ParentColumn": "CountryRegionCode",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "CountryRegion",
+            "ReferencedColumn": "CountryRegionCode"
+        },
+        {
+            "ForeignKeyName": "FK_CountryRegionCurrency_Currency_CurrencyCode",
+            "ParentSchema": "Sales",
+            "ParentTable": "CountryRegionCurrency",
+            "ParentColumn": "CurrencyCode",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "Currency",
+            "ReferencedColumn": "CurrencyCode"
+        },
+        {
+            "ForeignKeyName": "FK_CurrencyRate_Currency_FromCurrencyCode",
+            "ParentSchema": "Sales",
+            "ParentTable": "CurrencyRate",
+            "ParentColumn": "FromCurrencyCode",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "Currency",
+            "ReferencedColumn": "CurrencyCode"
+        },
+        {
+            "ForeignKeyName": "FK_CurrencyRate_Currency_ToCurrencyCode",
+            "ParentSchema": "Sales",
+            "ParentTable": "CurrencyRate",
+            "ParentColumn": "ToCurrencyCode",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "Currency",
+            "ReferencedColumn": "CurrencyCode"
+        },
+        {
+            "ForeignKeyName": "FK_Customer_Person_PersonID",
+            "ParentSchema": "Sales",
+            "ParentTable": "Customer",
+            "ParentColumn": "PersonID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Customer_SalesTerritory_TerritoryID",
+            "ParentSchema": "Sales",
+            "ParentTable": "Customer",
+            "ParentColumn": "TerritoryID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesTerritory",
+            "ReferencedColumn": "TerritoryID"
+        },
+        {
+            "ForeignKeyName": "FK_Customer_Store_StoreID",
+            "ParentSchema": "Sales",
+            "ParentTable": "Customer",
+            "ParentColumn": "StoreID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "Store",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_PersonCreditCard_CreditCard_CreditCardID",
+            "ParentSchema": "Sales",
+            "ParentTable": "PersonCreditCard",
+            "ParentColumn": "CreditCardID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "CreditCard",
+            "ReferencedColumn": "CreditCardID"
+        },
+        {
+            "ForeignKeyName": "FK_PersonCreditCard_Person_BusinessEntityID",
+            "ParentSchema": "Sales",
+            "ParentTable": "PersonCreditCard",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Person",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderDetail",
+            "ParentColumn": "SalesOrderID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesOrderHeader",
+            "ReferencedColumn": "SalesOrderID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderDetail",
+            "ParentColumn": "SpecialOfferID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SpecialOfferProduct",
+            "ReferencedColumn": "SpecialOfferID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderDetail",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SpecialOfferProduct",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_Address_ShipToAddressID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "ShipToAddressID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Address",
+            "ReferencedColumn": "AddressID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_Address_BillToAddressID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "BillToAddressID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "Address",
+            "ReferencedColumn": "AddressID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_CreditCard_CreditCardID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "CreditCardID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "CreditCard",
+            "ReferencedColumn": "CreditCardID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_CurrencyRate_CurrencyRateID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "CurrencyRateID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "CurrencyRate",
+            "ReferencedColumn": "CurrencyRateID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_Customer_CustomerID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "CustomerID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "Customer",
+            "ReferencedColumn": "CustomerID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_SalesPerson_SalesPersonID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "SalesPersonID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesPerson",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_SalesTerritory_TerritoryID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "TerritoryID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesTerritory",
+            "ReferencedColumn": "TerritoryID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeader_ShipMethod_ShipMethodID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeader",
+            "ParentColumn": "ShipMethodID",
+            "ReferencedSchema": "Purchasing",
+            "ReferencedTable": "ShipMethod",
+            "ReferencedColumn": "ShipMethodID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeaderSalesReason_SalesOrderHeader_SalesOrderID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeaderSalesReason",
+            "ParentColumn": "SalesOrderID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesOrderHeader",
+            "ReferencedColumn": "SalesOrderID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesOrderHeaderSalesReason_SalesReason_SalesReasonID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesOrderHeaderSalesReason",
+            "ParentColumn": "SalesReasonID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesReason",
+            "ReferencedColumn": "SalesReasonID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesPerson_Employee_BusinessEntityID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesPerson",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "HumanResources",
+            "ReferencedTable": "Employee",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesPerson_SalesTerritory_TerritoryID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesPerson",
+            "ParentColumn": "TerritoryID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesTerritory",
+            "ReferencedColumn": "TerritoryID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesPersonQuotaHistory_SalesPerson_BusinessEntityID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesPersonQuotaHistory",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesPerson",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesTaxRate_StateProvince_StateProvinceID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesTaxRate",
+            "ParentColumn": "StateProvinceID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "StateProvince",
+            "ReferencedColumn": "StateProvinceID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesTerritory_CountryRegion_CountryRegionCode",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesTerritory",
+            "ParentColumn": "CountryRegionCode",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "CountryRegion",
+            "ReferencedColumn": "CountryRegionCode"
+        },
+        {
+            "ForeignKeyName": "FK_SalesTerritoryHistory_SalesPerson_BusinessEntityID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesTerritoryHistory",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesPerson",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_SalesTerritoryHistory_SalesTerritory_TerritoryID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SalesTerritoryHistory",
+            "ParentColumn": "TerritoryID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesTerritory",
+            "ReferencedColumn": "TerritoryID"
+        },
+        {
+            "ForeignKeyName": "FK_ShoppingCartItem_Product_ProductID",
+            "ParentSchema": "Sales",
+            "ParentTable": "ShoppingCartItem",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_SpecialOfferProduct_Product_ProductID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SpecialOfferProduct",
+            "ParentColumn": "ProductID",
+            "ReferencedSchema": "Production",
+            "ReferencedTable": "Product",
+            "ReferencedColumn": "ProductID"
+        },
+        {
+            "ForeignKeyName": "FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID",
+            "ParentSchema": "Sales",
+            "ParentTable": "SpecialOfferProduct",
+            "ParentColumn": "SpecialOfferID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SpecialOffer",
+            "ReferencedColumn": "SpecialOfferID"
+        },
+        {
+            "ForeignKeyName": "FK_Store_BusinessEntity_BusinessEntityID",
+            "ParentSchema": "Sales",
+            "ParentTable": "Store",
+            "ParentColumn": "BusinessEntityID",
+            "ReferencedSchema": "Person",
+            "ReferencedTable": "BusinessEntity",
+            "ReferencedColumn": "BusinessEntityID"
+        },
+        {
+            "ForeignKeyName": "FK_Store_SalesPerson_SalesPersonID",
+            "ParentSchema": "Sales",
+            "ParentTable": "Store",
+            "ParentColumn": "SalesPersonID",
+            "ReferencedSchema": "Sales",
+            "ReferencedTable": "SalesPerson",
+            "ReferencedColumn": "BusinessEntityID"
+        }
+    ]
+}

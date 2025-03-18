@@ -1,0 +1,12 @@
+django
+mssql-django
+langchain
+langchain-core
+langchain-google-genai
+langchain-community
+langchain-experimental
+sqlalchemy
+pyodbc
+gunicorn
+fuzzywuzzy
+sqlglot

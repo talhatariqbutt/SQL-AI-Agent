@@ -1,0 +1,22 @@
+venv/
+working/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+db.sqlite3
+.env
+*.drawio.png
+*.docx
+*.sql
+*.json
+*.txt
+
+# Exclude everything except necessary files
+!agent/
+!queryapp/
+!sql_agent.log
+!AdventureWorks_schema.json
+!Optimized_SQLAgent.docx
+!optimized_sql.png
+!requirements.txt
