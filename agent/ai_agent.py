@@ -1,6 +1,7 @@
 import json
 import re
 import sqlglot  # ✅ Pre-validation of SQL queries
+from django.conf import settings
 from langchain_core.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from sqlalchemy import create_engine, text
@@ -15,8 +16,12 @@ import os
 logging.basicConfig(filename="sql_agent.log", level=logging.INFO, 
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Define the database connection string
-DATABASE_URL = "mssql+pyodbc://django_user:1234@host.docker.internal:1433/AdventureWorks?driver=ODBC+Driver+17+for+SQL+Server&TrustServerCertificate=yes"
+# # Define the database connection string
+# DATABASE_URL = "mssql+pyodbc://django_user:1234@host.docker.internal:1433/AdventureWorks?driver=ODBC+Driver+17+for+SQL+Server&TrustServerCertificate=yes"
+
+# Hardcoded Azure SQL Connection String
+DATABASE_URL = "mssql+pyodbc://sqlserveradmin:Admin12345678@sqlagent-server.database.windows.net:1433/AdventureWorks?driver=ODBC+Driver+18+for+SQL+Server&Encrypt=yes&TrustServerCertificate=no&Connection+Timeout=30"
+
 
 # Create a SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
@@ -35,15 +40,6 @@ except Exception as e:
 schema_cache = None
 schema_lock = threading.Lock()
 
-# def get_schema():
-#     """Loads schema once and stores it in memory."""
-#     global schema_cache
-#     if schema_cache is None:
-#         with schema_lock:
-#             if schema_cache is None:  
-#                 with open("AdventureWorks_schema.json", "r") as f:
-#                     schema_cache = json.load(f)
-#     return schema_cache
 
 def get_schema():
     """Loads schema once and stores it in memory."""
@@ -227,3 +223,4 @@ if __name__ == "__main__":
     user_prompt = input("Enter your query: ")
     output = run_sql_agent(user_prompt)
     logging.info("\n🎯 Final Output: %s", output)
+

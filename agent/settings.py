@@ -84,8 +84,23 @@ WSGI_APPLICATION = 'agent.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'AdventureWorks',
+#         'USER': 'django_user',
+#         'PASSWORD': '1234',
+#         'HOST': 'host.docker.internal',  # Or 'localhost'
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#             'TrustServerCertificate': 'yes',
+#         },
+#     }
+# }
+
 DATABASES = {
-    'default': {
+    'default': {  # Local SQL Server (Docker or localhost)
         'ENGINE': 'mssql',
         'NAME': 'AdventureWorks',
         'USER': 'django_user',
@@ -96,8 +111,23 @@ DATABASES = {
             'driver': 'ODBC Driver 17 for SQL Server',
             'TrustServerCertificate': 'yes',
         },
+    },
+    'azure': {  # Azure SQL Database
+        'ENGINE': 'django_mssql_backend',
+        'NAME': 'Development-DB',  # Azure SQL Database name
+        'USER': 'sqlserveradmin',
+        'PASSWORD': 'your_password_here',
+        'HOST': 'sqlagent-server.database.windows.net',  # Azure SQL Server
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'encrypt': True,  # Required for Azure SQL
+            'TrustServerCertificate': False,  # Secure connection
+            'timeout': 30,  # Optional timeout setting
+        },
     }
 }
+
 
 
 # Password validation
