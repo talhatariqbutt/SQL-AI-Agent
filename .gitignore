@@ -20,4 +20,5 @@ db.sqlite3
 !Optimized_SQLAgent.docx
 !optimized_sql.png
 !requirements.txt
+!vercel.json
 .vercel

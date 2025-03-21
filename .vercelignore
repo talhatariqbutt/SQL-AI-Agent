@@ -19,3 +19,4 @@ db.sqlite3
 !sql_agent.log
 !AdventureWorks_schema.json
 !requirements.txt
+!vercel.json
