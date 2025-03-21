@@ -29,7 +29,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.ngrok-free.app",
     #"https://c53d-124-109-40-94.ngrok-free.app"
 ]
-ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1", ".ngrok-free.app"]
+ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1", ".ngrok-free.app", ".vercel.app"]
 
 # Application definition
 
