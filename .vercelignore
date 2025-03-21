@@ -11,12 +11,11 @@ db.sqlite3
 *.sql
 *.json
 *.txt
+*.png
 
 # Exclude everything except necessary files
 !agent/
 !queryapp/
 !sql_agent.log
 !AdventureWorks_schema.json
-!Optimized_SQLAgent.docx
-!optimized_sql.png
 !requirements.txt
